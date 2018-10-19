@@ -12,6 +12,21 @@ max_range = 8
 
 step_size = 0.25
 
+
+def checkDiversity(x,n,pop_size):
+
+        same = 1
+
+        for i in range(1,pop_size):
+
+                   if(x[i] != x[0]):
+                          same = 0
+                          return same
+        
+        return same
+
+
+
 #evaluation function
 def fitness(x,N):
 	sum = 0;
@@ -116,6 +131,12 @@ def SA(x, n, pop_size):
 			comp_coop_T *= .99
 
 			interval = math.ceil(interval)
+
+		same = checkDiversity(x, n, pop_size)
+
+		# if there is no diversity then we exit
+		if(same):
+			break
 
 		iter += 1
 
