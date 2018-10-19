@@ -156,7 +156,6 @@ def cooperative(x, n, T,pop_size):
 
 	fit = []
 
-	newx = copy.deepcopy(x)
 
 	for i in range(pop_size):
 		fit.append(fitness(x[i], n))
@@ -185,7 +184,7 @@ def cooperative(x, n, T,pop_size):
 				x[j] = x[i][:half] + x[j][half:]
 				x[i] = temp + x[i][half:]
 	
-	return newx
+	return x
 
 
 
