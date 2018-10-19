@@ -200,13 +200,9 @@ def main():
 	for n in N:
 	
 		x = []
-		T = 1
+		
 		for i in range(pop_size):
 			x.append([random.uniform(min_range,max_range) for t in range(n)])
-	
-		best = fitness(x[0],n)
-		best_x = x[0]
-
 
 		# Do the memes
 		best = SA(x, n, pop_size)
