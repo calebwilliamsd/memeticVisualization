@@ -13,7 +13,7 @@ max_range = 8
 step_size = 0.25
 
 
-def checkDiversity(x,n,pop_size):
+def checkDiversity(x,pop_size):
 
         same = 1
 
